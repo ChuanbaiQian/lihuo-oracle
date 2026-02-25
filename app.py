@@ -40,7 +40,7 @@ def generate_card():
     draw.rectangle([40, 40, 90, 140], outline=(180, 40, 40), width=2)
     draw.text((50, 55), "离\n火", fill=(180, 40, 40), font=font_sub)
     draw.text((120, 80), f"{solar.toYmd()}", fill=(60, 60, 60), font=font_sub)
-    y_start = 280
+    y_start = 180
     for i, char in enumerate(pi_yu):
         draw.text((width//2 - 25, y_start + i*65), char, fill=(40, 40, 40), font=font_main)
     draw.text((80, 780), "宜：逻辑拆解", fill=(180, 40, 40), font=font_sub)
@@ -69,4 +69,5 @@ if st.button('点击抽取今日神谕'):
             data=byte_im,
             file_name=f"fortune_{datetime.now().strftime('%m%d')}.png",
             mime="image/png"
+
         )
